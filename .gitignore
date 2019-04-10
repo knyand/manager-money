@@ -1,5 +1,6 @@
 # compiled output
 /out
+/build
 
 #IDEs
 /.idea
@@ -7,4 +8,3 @@
 
 #Gradle
 /.gradle
-/gradle
