@@ -1,15 +1,13 @@
 package loc.mark52.managermoney.data.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "CATEGORIES")
-@Getter
-@Setter
+@Data
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,7 +16,6 @@ public class Category {
     @NotEmpty
     @Column(name = "NAME")
     private String name;
-    @NotEmpty
     @Column(name = "CAPACITY")
     private double capacity;
 }

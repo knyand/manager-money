@@ -30,8 +30,9 @@ public class UserController {
     }
 
     @GetMapping("{id}")
-    public List accounts(@PathVariable Long id) {
-        List list = new ArrayList();
+    public List<Map<String, String>> accounts(@PathVariable Long id) {
+        List<Map<String, String>> list = new ArrayList<>();
+
         Map<String, Double> accounts = userService.findById(id).getAccounts();
         for (Map.Entry<String, Double> account : accounts.entrySet()) {
             Map<String, String> result = new HashMap<>();

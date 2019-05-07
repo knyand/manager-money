@@ -1,8 +1,7 @@
 package loc.mark52.managermoney.data.entity;
 
 import loc.mark52.managermoney.validator.UserDuplicate;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -13,8 +12,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "USERS")
-@Getter
-@Setter
+@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
