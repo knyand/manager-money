@@ -27,4 +27,10 @@ public class CategoryController {
     public Category addCategory(@Valid @RequestBody Category category) {
         return categoryService.save(category);
     }
+
+    @PutMapping(path = "{id}", produces = "application/json")
+    @ResponseStatus(HttpStatus.OK)
+    public Category editCategory(@PathVariable long id, @RequestBody Category category) {
+        return categoryService.edit(id, category);
+    }
 }
